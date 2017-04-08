@@ -35,7 +35,7 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 [to be updated]
 
 ## Remote Access
-[Instructions] (https://github.com/openhab/openhab-cloud/blob/master/README.md)
+[Instructions](https://github.com/openhab/openhab-cloud/blob/master/README.md)
 
 
 
