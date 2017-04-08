@@ -1,6 +1,6 @@
 # FibaroOpenHAB
 
-Using Fibaro Sensors with OpenHAB2 to display simple information using *BasicUI* sitemap and setting up persistence using *mySQL*.
+Using Fibaro Sensors with OpenHAB2 to display simple information using *BasicUI* sitemap, setting up persistence using *mySQL* and remote access.
 Hardware used - 
 - Fibaro Sensors 
     - Fibaro (Motion) MultiSensor  - *FGMS-001*
@@ -32,6 +32,10 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 4. In current setup, Door Sensor is added through the HabMin and therefore does not have a text configuration file.
 
 ## MySQL Persistence
+[to be updated]
+
+## Remote Access
+[Instructions] (https://github.com/openhab/openhab-cloud/blob/master/README.md)
 
 
 
