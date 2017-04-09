@@ -7,11 +7,18 @@ Hardware used -
     - Fibaro Door/Window Sensor - *FGK-101-107*
 - Aeotec Z-Wave Stick Gen5
 
+*In the current setup, PaperUI is used to discover and add new devices while HabMin provides a better UI for configuration with a mix of text configuration files*
+OpenHAB UI's can be accessed at http://ip-network-of-device:8080
+
 ## Z-Wave Binding
 Install ZWave binding using *PaperUI*.
+New devices can be added using *PaperUI*'s inbox discovery feature. If device not correctly recognised/initialized, wake up again by triple clicking the b button. 
+Ignore Z-Wave Binding instructions available online as they only seem appropriate for OH1, follow this for OH2.
+
+**NOTE: HabMin currently buggy for adding Z-Wave devices, so only used for configuring them at the moment**
 
 ## Aeotec Z-Wave Stick Gen5 Instructions
-For inclusion/exclusion of sensors.
+For inclusion/exclusion of sensors manually (not usually required!).
 [Aeotec User Manual](https://aeotec.freshdesk.com/support/solutions/articles/6000056439-z-stick-gen-5-user-manual-)
 
 ## HabMin
@@ -26,6 +33,8 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
     - Corresponding sitemap -
     > Frame label="Movement" { Text item=motionSensor }
 [More info here](https://community.openhab.org/t/solved-fibaro-fgms-001-cannot-see-alarm-off-on-in-gui-paperui/25685/8)
+
+*alarm_motion* can be set as Switch or Number to display ON/OFF or 1/0.
 
 **Note: In current binding sensor_binary is not functioning properly. As far as I can tell it gets triggered only when the device is woken up manually (by tripple clicking and b button) and stays on till next wake up time.**
 
