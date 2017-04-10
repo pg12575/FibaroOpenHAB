@@ -71,9 +71,9 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 
         Frame label="Movement" 
         {
-	    Text item=motionSensor1 
-            Text item=motionSensor2 
-            Text item=doorSensor1
+		Text item=motionSensor1 
+		Text item=motionSensor2 
+		Text item=doorSensor1
         }
     }
     
