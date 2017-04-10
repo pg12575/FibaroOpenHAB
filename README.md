@@ -31,7 +31,7 @@ OpenHAB UI's can be accessed at http://ip-network-of-device:8080
 
 ### Important Linux Commands
 
-```
+```sh
 sudo systemctl status openhab2.service 	// check status of openHAB
 sudo systemctl start openhab2.service 	// start openHAB
 sudo systemctl stop openhab2.service	// stop openHAB
@@ -65,7 +65,7 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 
 ### Fibaro Motion/Multi Sensor
   
-    ``` 
+    
     Switch	 motionSensor         "Motion [%s]" 	<motion> 	(mSensor)	{ channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
     Number mSensorBattery1   	"Battery [%s]" 	<battery> 			{ channel="zwave:device:15b5860e0b8:node4:battery-level" }
    
@@ -73,7 +73,7 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
     
     Number	motionSensor1	 	"Motion Node 4 [%s]" <motion> 	(mSensor) 	{channel="zwave:device:15b5860e0b8:node4:alarm_motion" }
     Number 	mSensorBattery1   	"Battery [%s]"       <battery> 		{ channel="zwave:device:15b5860e0b8:node4:battery-level" }
-    ```
+    
 [More info here](https://community.openhab.org/t/solved-fibaro-fgms-001-cannot-see-alarm-off-on-in-gui-paperui/25685/8)
 
 *alarm_motion* can be set as Switch or Number to display ON/OFF or 1/0.
