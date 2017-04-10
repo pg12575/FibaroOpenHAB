@@ -27,12 +27,12 @@ OpenHAB UI's can be accessed at http://ip-network-of-device:8080
 *For [openHABian](https://github.com/openhab/openhabian/releases), all folders located at - openhabian@openhabianpi:/$*
 
 ### Important Linux Commands
+
 ```
 sudo systemctl status openhab2.service
 sudo systemctl start openhab2.service
 sudo systemctl stop openhab2.service
 sudo systemctl restart openhab2.service
-
 ```
 
 ## Z-Wave Binding
