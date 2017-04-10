@@ -81,7 +81,7 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
     
     ```
     
-![BasicUI] (https://cloud.githubusercontent.com/assets/10930753/24872118/26adaffc-1e14-11e7-8240-5e51d805fa8e.png)
+![BasicUI](https://cloud.githubusercontent.com/assets/10930753/24872118/26adaffc-1e14-11e7-8240-5e51d805fa8e.png)
 
 *Don't forget to change Basic UI sitemap name through Paper UI.*
 
