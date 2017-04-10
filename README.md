@@ -24,7 +24,7 @@ OpenHAB UI's can be accessed at http://ip-network-of-device:8080
 
 [More info..](http://docs.openhab.org/installation/linux.html#file-locations)
 
-*For openHABian, all folders located at - openhabian@openhabianpi:/$*
+*For [openHABian](https://github.com/openhab/openhabian/releases), all folders located at - openhabian@openhabianpi:/$*
 
 ## Z-Wave Binding
 Install ZWave binding using *PaperUI*.
