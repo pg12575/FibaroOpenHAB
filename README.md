@@ -10,6 +10,16 @@ Hardware used -
 *In the current setup, PaperUI is used to discover and add new devices while HabMin provides a better UI for configuration with a mix of text configuration files*
 OpenHAB UI's can be accessed at http://ip-network-of-device:8080
 
+### Location of OpenHAB Files on Linux
+openHAB application -           */usr/share/openhab2*
+Additional add-on files -       */usr/share/openhab2/addons*
+Site configuration -	        */etc/openhab2*
+Log files -     	            */var/log/openhab2*
+Userdata like rrd4j databases - */var/lib/openhab2*
+Service configuration - 	    */etc/default/openhab2*
+
+[More info..](http://docs.openhab.org/installation/linux.html#file-locations)
+
 ## Z-Wave Binding
 Install ZWave binding using *PaperUI*.
 New devices can be added using *PaperUI*'s inbox discovery feature. If device not correctly recognised/initialized, wake up again by triple clicking the b button. 
