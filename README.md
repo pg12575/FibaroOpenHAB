@@ -1,10 +1,11 @@
 # FibaroOpenHAB
 
 Using Fibaro Sensors with OpenHAB2 to display simple information using *BasicUI* sitemap, setting up persistence using *mySQL* and remote access.
-Hardware used - 
+Hardware used (so far) - 
 - Fibaro Sensors 
     - Fibaro (Motion) MultiSensor  - *FGMS-001*
     - Fibaro Door/Window Sensor - *FGK-101-107*
+    - Fibaro Wall Plug - *FGWPE-101*
 - Aeotec Z-Wave Stick Gen5
 
 *In the current setup, PaperUI is used to discover and add new devices while HabMin provides a better UI for configuration with a mix of text configuration files*
@@ -52,11 +53,16 @@ For inclusion/exclusion of sensors manually (not usually required!).
 
 ## HabMin, .items File and Sitemap (Adding Multi Sensor and Door/Window Sensor)
 HabMin used for adding and managing devices (installed using *PaperUI*). 
-1. Add *Serial Controller* automatically discovered once Aeotec Stick plugged in.
+
+### Serial Controller
+
+- Add *Serial Controller* automatically discovered once Aeotec Stick plugged in.
     - Enter Port - discovered by typing  **$ ls /dev/tty***
-2. Add Motion Sensor discovered by triple clicking B button (waking device up).
-    - *Note: Sensor must be already included in the Z-Wave Stick, this is to add the sensor to openHAB.*
-3. Device Node and Channels UID can be discovered once device is added. For **MultiSensor**, following can be used for motion in .items file - 
+- Add Fibaro devices discovered by triple clicking B button (waking device up).
+- Device Node and Channels UID can be discovered once device is added. For Fibaro devices, following can be used in the .items file 
+
+### Fibaro Motion/Multi Sensor
+  
     ``` 
     Switch	 motionSensor         "Motion [%s]" 	<motion> 	(mSensor)	{ channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
     Number mSensorBattery1   	"Battery [%s]" 	<battery> 			{ channel="zwave:device:15b5860e0b8:node4:battery-level" }
@@ -72,26 +78,54 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 
 *Note: In current binding sensor_binary is not functioning properly. As far as I can tell it gets triggered only when the device is woken up manually (by tripple clicking and b button) and stays on till next wake up time.*
 
-4. For **Door/Window sensor**, following line is added to .items - 
+### Fibaro Door/Window Sensor
+
+
     ```
     Number doorSensor1    "Door Node 5 [%s]" <window>  { channel="zwave:device:15b5860e0b8:node5:sensor_door"}
     ```
-5. Corresponding sitemap - 
-    ```
-    sitemap smarthome label="FibaroOpenHAB SmartHome" 
-    {
+    
+### Fibaro Wall Plug
+```
+Switch heater    "Plug Node 7 [%s]"  { channel="zwave:device:15b5860e0b8:node7:switch_binary"}
 
-        Frame label="Movement" 
-        {
-		Text item=motionSensor1 
-		Text item=motionSensor2 
-		Text item=doorSensor1
-        }
+Number heaterWatts    "Watts [%s]"  <battery>{ channel="zwave:device:15b5860e0b8:node7:sensor_power"}
+
+Number heaterKWH    "KWH [%s]"  <battery>{ channel="zwave:device:15b5860e0b8:node7:meter_kwh"}
+```
+*Note: meter_watts is not working in current binding. Instead use sensor_power.*
+
+### Corresponding sitemap - 
+
+```
+ sitemap smarthome label="FibaroOpenHAB SmartHome" {
+
+    Frame label="Movement" {
+
+
+	Text item=motionSensor1 
+	Text item=mSensorBattery1 
+
+	Text item=motionSensor2 
+	Text item=mSensorBattery2
+
+	Text item=doorSensor1
+	Text item=dSensorBattery1 
     }
+
+    Frame label="Heating" {
+	
+	Switch item=heater
+
+	Text item=heaterWatts
+	Text item=heaterKWH
+	
+	} 
+}
     
-    ```
+```
     
-Here is a snapshot of the BasicUI setup through this sitemap:
+Here is a snapshot of the BasicUI setup through this sitemap (without wall plug):
 ![BasicUI](https://cloud.githubusercontent.com/assets/10930753/24872118/26adaffc-1e14-11e7-8240-5e51d805fa8e.png)
 
 *Don't forget to change Basic UI sitemap name through Paper UI.*
