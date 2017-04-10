@@ -2,7 +2,7 @@
 
 Using Fibaro Sensors with OpenHAB2 to display simple information using *BasicUI* sitemap, setting up persistence using *mySQL* and remote access.
 Hardware used (so far) - 
-- Fibaro Sensors 
+- Fibaro Devices 
     - Fibaro (Motion) MultiSensor  - *FGMS-001*
     - Fibaro Door/Window Sensor - *FGK-101-107*
     - Fibaro Wall Plug - *FGWPE-101*
@@ -51,7 +51,7 @@ Ignore Z-Wave Binding instructions available online as they only seem appropriat
 For inclusion/exclusion of sensors manually (not usually required!).
 [Aeotec User Manual](https://aeotec.freshdesk.com/support/solutions/articles/6000056439-z-stick-gen-5-user-manual-)
 
-## HabMin, .items File and Sitemap (Adding Multi Sensor and Door/Window Sensor)
+## HabMin, .items File and Sitemap (Adding Fibaro Devices)
 HabMin used for adding and managing devices (installed using *PaperUI*). 
 
 ### Serial Controller
