@@ -19,7 +19,7 @@ OpenHAB UI's can be accessed at http://ip-network-of-device:8080
     - Includes *events.log, openhab.log*
 - Userdata like rrd4j databases - */var/lib/openhab2*
     - Includes *cache, config, etc, hueemulation, jsondb, kar, log, persistence, tmp, **zwave***
-        - **Imporant: zwave folder includes .xml files for each node/device**
+        - **Important: zwave folder includes .xml files for each node/device**
 - Service configuration - 	    */etc/default/openhab2*
 
 [More info..](http://docs.openhab.org/installation/linux.html#file-locations)
