@@ -70,11 +70,12 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
    
   **OR**
   
-    ```
+```    
     Number	motionSensor1	 	"Motion Node 4 [%s]" <motion> 	(mSensor) 	{channel="zwave:device:15b5860e0b8:node4:alarm_motion" }
     
     Number 	mSensorBattery1   	"Battery [%s]"       <battery> 		{ channel="zwave:device:15b5860e0b8:node4:battery-level" }
-    ```
+```
+    
 [More info here](https://community.openhab.org/t/solved-fibaro-fgms-001-cannot-see-alarm-off-on-in-gui-paperui/25685/8)
 
 *alarm_motion* can be set as Switch or Number to display ON/OFF or 1/0.
@@ -84,9 +85,9 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 ### Fibaro Door/Window Sensor
 
 
-    ```
+    
     Number doorSensor1    "Door Node 5 [%s]" <window>  { channel="zwave:device:15b5860e0b8:node5:sensor_door"}
-    ```
+    
     
 ### Fibaro Wall Plug
 ```
@@ -125,7 +126,7 @@ Number heaterKWH    "KWH [%s]"  <battery>{ channel="zwave:device:15b5860e0b8:nod
 	
 	} 
 }
-    
+ 
 ```
     
 Here is a snapshot of the BasicUI setup through this sitemap (without wall plug):
