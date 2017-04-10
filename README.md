@@ -29,11 +29,12 @@ OpenHAB UI's can be accessed at http://ip-network-of-device:8080
 ### Important Linux Commands
 
 ```
-sudo systemctl status openhab2.service
-sudo systemctl start openhab2.service
-sudo systemctl stop openhab2.service
-sudo systemctl restart openhab2.service
+sudo systemctl status openhab2.service 	//check status of openHAB
+sudo systemctl start openhab2.service 	//start openHAB
+sudo systemctl stop openhab2.service	//stop openHAB
+sudo systemctl restart openhab2.service	//restart openHAB
 ```
+*Restart is sometimes required when .sitemap file is changed to re-sync Basic UI so it updates in realtime.*
 
 ## Z-Wave Binding
 Install ZWave binding using *PaperUI*.
