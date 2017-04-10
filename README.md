@@ -32,7 +32,8 @@ New devices can be added using *PaperUI*'s inbox discovery feature. If device no
 Ignore Z-Wave Binding instructions available online as they only seem appropriate for OH1, follow this for OH2.
 
 *NOTE: HabMin currently buggy for adding Z-Wave devices, so only used for configuring them at the moment*
-**Reminder: Don't forget to wake up battery powered devices when any changes to .items file is made**
+
+*Reminder: Don't forget to wake up battery powered devices when any changes to .items file is made*
 
 
 ## Aeotec Z-Wave Stick Gen5 Instructions
@@ -77,6 +78,7 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
     }
     
     ```
+
 *Don't forget to change Basic UI sitemap name through Paper UI.*
 
 ## MySQL Persistence
