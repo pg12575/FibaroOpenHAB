@@ -47,7 +47,9 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
     - *Note: Sensor must be already included in the Z-Wave Stick, this is to add the sensor to openHAB.*
 3. Device Node and Channels UID can be discovered once device is added. For MultiSensor, following can be used for motion in .items file - 
     > Switch motionSensor         "Motion [%s]" \<icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
+    
     > **OR**
+    
     >Number motionSensor         "Motion [%s]" \<icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
     
     - Corresponding sitemap -
