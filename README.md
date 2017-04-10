@@ -12,10 +12,14 @@ OpenHAB UI's can be accessed at http://ip-network-of-device:8080
 
 ### Location of openHAB Files on Linux
 - openHAB application -           */usr/share/openhab2*
-- Additional add-on files -       */usr/share/openhab2/addons*
+    - Includes *addons, bin, runtime, start.sh, start_debug.sh*
 - Site configuration -	        */etc/openhab2*
+    - Includes *html, icons, items, persistence, rules, scripts, services, sitemaps, sounds, things, transform*
 - Log files -     	            */var/log/openhab2*
+    - Includes *events.log, openhab.log*
 - Userdata like rrd4j databases - */var/lib/openhab2*
+    - Includes *cache, config, etc, hueemulation, jsondb, kar, log, persistence, tmp, **zwave***
+        - **Imporant: zwave folder includes .xml files for each node/device**
 - Service configuration - 	    */etc/default/openhab2*
 
 [More info..](http://docs.openhab.org/installation/linux.html#file-locations)
@@ -28,6 +32,8 @@ New devices can be added using *PaperUI*'s inbox discovery feature. If device no
 Ignore Z-Wave Binding instructions available online as they only seem appropriate for OH1, follow this for OH2.
 
 **NOTE: HabMin currently buggy for adding Z-Wave devices, so only used for configuring them at the moment**
+**Reminder: Don't forget to wake up battery powered devices when any changes to .items file is made**
+
 
 ## Aeotec Z-Wave Stick Gen5 Instructions
 For inclusion/exclusion of sensors manually (not usually required!).
@@ -40,7 +46,9 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 2. Add Motion Sensor discovered by triple clicking B button (waking device up).
     - *Note: Sensor must be already included in the Z-Wave Stick, this is to add the sensor to openHAB.*
 3. Device Node and Channels UID can be discovered once device is added. For MultiSensor, following can be used for motion in .items file - 
-    > Switch motionSensor         "Motion [%s]" { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
+    > Switch motionSensor         "Motion [%s]" \<icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
+    > **OR**
+    >Number motionSensor         "Motion [%s]" \<icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
     
     - Corresponding sitemap -
     > Frame label="Movement" { Text item=motionSensor }
