@@ -47,11 +47,11 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
     - *Note: Sensor must be already included in the Z-Wave Stick, this is to add the sensor to openHAB.*
 3. Device Node and Channels UID can be discovered once device is added. For **MultiSensor**, following can be used for motion in .items file - 
     ``` 
-    Switch motionSensor         "Motion [%s]" \<icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
+    Switch motionSensor         "Motion [%s]" <icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
     ```
     **OR**
     ```
-    Number motionSensor         "Motion [%s]" \<icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
+    Number motionSensor         "Motion [%s]" <icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
     ```
 [More info here](https://community.openhab.org/t/solved-fibaro-fgms-001-cannot-see-alarm-off-on-in-gui-paperui/25685/8)
 
@@ -61,7 +61,7 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 
 4. For **Door/Window sensor**, following line is added to .items - 
     ```
-    Number doorSensor1    "Door Node 5 [%s]" \<window>  { channel="zwave:device:15b5860e0b8:node5:sensor_door"}
+    Number doorSensor1    "Door Node 5 [%s]" <window>  { channel="zwave:device:15b5860e0b8:node5:sensor_door"}
     ```
 5. Corresponding sitemap - 
     ```
