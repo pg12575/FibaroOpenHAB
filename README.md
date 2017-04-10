@@ -86,8 +86,11 @@ Here is a snapshot of the BasicUI setup through this sitemap:
 
 *Don't forget to change Basic UI sitemap name through Paper UI.*
 
+
+[Rest of the document to be updated..]
+
 ## MySQL Persistence
-[to be updated]
+[Instructions](https://community.openhab.org/t/openhab2-mysql-persistence-setup/15829)
 
 ## Remote Access
 [Instructions](https://github.com/openhab/openhab-cloud/blob/master/README.md)
