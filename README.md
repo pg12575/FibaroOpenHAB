@@ -46,21 +46,37 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 2. Add Motion Sensor discovered by triple clicking B button (waking device up).
     - *Note: Sensor must be already included in the Z-Wave Stick, this is to add the sensor to openHAB.*
 3. Device Node and Channels UID can be discovered once device is added. For MultiSensor, following can be used for motion in .items file - 
-    > Switch motionSensor         "Motion [%s]" \<icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
-    
-    > **OR**
-    
-    >Number motionSensor         "Motion [%s]" \<icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
-    
-    - Corresponding sitemap -
-    > Frame label="Movement" { Text item=motionSensor }
+    ``` 
+    Switch motionSensor         "Motion [%s]" \<icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
+    ```
+    **OR**
+    ```
+    Number motionSensor         "Motion [%s]" \<icon> (group) { channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
+    ```
 [More info here](https://community.openhab.org/t/solved-fibaro-fgms-001-cannot-see-alarm-off-on-in-gui-paperui/25685/8)
 
 *alarm_motion* can be set as Switch or Number to display ON/OFF or 1/0.
 
 **Note: In current binding sensor_binary is not functioning properly. As far as I can tell it gets triggered only when the device is woken up manually (by tripple clicking and b button) and stays on till next wake up time.**
 
-4. In current setup, Door Sensor is added through the HabMin and therefore does not have a text configuration file.
+4. For Door/Window sensor, following line is added to .items - 
+    ```
+    Number doorSensor1    "Door Node 5 [%s]" \<window>  { channel="zwave:device:15b5860e0b8:node5:sensor_door"}
+    ```
+5. Corresponding sitemap - 
+    ```
+    sitemap smarthome label="FibaroOpenHAB SmartHome" 
+    {
+
+        Frame label="Movement" 
+        {
+	        Text item=motionSensor1 
+            Text item=motionSensor2 
+            Text item=doorSensor1
+        }
+    }
+    
+    ```
 
 ## MySQL Persistence
 [to be updated]
