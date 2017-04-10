@@ -26,6 +26,15 @@ OpenHAB UI's can be accessed at http://ip-network-of-device:8080
 
 *For [openHABian](https://github.com/openhab/openhabian/releases), all folders located at - openhabian@openhabianpi:/$*
 
+###Important Linux Commands
+```
+sudo systemctl status openhab2.service
+sudo systemctl start openhab2.service
+sudo systemctl stop openhab2.service
+sudo systemctl restart openhab2.service
+
+```
+
 ## Z-Wave Binding
 Install ZWave binding using *PaperUI*.
 New devices can be added using *PaperUI*'s inbox discovery feature. If device not correctly recognised/initialized, wake up again by triple clicking the b button. 
