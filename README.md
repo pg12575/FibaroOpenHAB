@@ -64,16 +64,15 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 - Device Node and Channels UID can be discovered once device is added. For Fibaro devices, following can be used in the .items file 
 
 ### Fibaro Motion/Multi Sensor
-  
-    
-    Switch	 motionSensor         "Motion [%s]" 	<motion> 	(mSensor)	{ channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
+
+      Switch	 motionSensor         "Motion [%s]" 	<motion> 	(mSensor)	{ channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
     Number mSensorBattery1   	"Battery [%s]" 	<battery> 			{ channel="zwave:device:15b5860e0b8:node4:battery-level" }
    
-    **OR**
-    
+  **OR**
+    ```
     Number	motionSensor1	 	"Motion Node 4 [%s]" <motion> 	(mSensor) 	{channel="zwave:device:15b5860e0b8:node4:alarm_motion" }
     Number 	mSensorBattery1   	"Battery [%s]"       <battery> 		{ channel="zwave:device:15b5860e0b8:node4:battery-level" }
-    
+    ```
 [More info here](https://community.openhab.org/t/solved-fibaro-fgms-001-cannot-see-alarm-off-on-in-gui-paperui/25685/8)
 
 *alarm_motion* can be set as Switch or Number to display ON/OFF or 1/0.
