@@ -65,8 +65,9 @@ HabMin used for adding and managing devices (installed using *PaperUI*).
 
 ### Fibaro Motion/Multi Sensor
 
-      Switch	 motionSensor         "Motion [%s]" 	<motion> 	(mSensor)	{ channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
-    Number mSensorBattery1   	"Battery [%s]" 	<battery> 			{ channel="zwave:device:15b5860e0b8:node4:battery-level" }
+    Switch	 motionSensor        	"Motion [%s]" 	<motion> 	(mSensor)	{ channel="zwave:device:15b4d86c1b1:node4:alarm_motion" }
+      
+    Number 	mSensorBattery1   	"Battery [%s]" 	<battery> 			{ channel="zwave:device:15b5860e0b8:node4:battery-level" }
    
   **OR**
   
