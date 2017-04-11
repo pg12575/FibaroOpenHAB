@@ -138,7 +138,7 @@ Number heaterKWH    "KWH [%s]"  <battery>{ channel="zwave:device:15b5860e0b8:nod
 ```
     
 Here is a snapshot of the BasicUI setup through this sitemap (without wall plug):
-![BasicUI](https://cloud.githubusercontent.com/assets/10930753/24872118/26adaffc-1e14-11e7-8240-5e51d805fa8e.png)
+![BasicUI](https://cloud.githubusercontent.com/assets/10930753/24920076/c7b18d5a-1edd-11e7-95c4-80c4e1abafa5.png)
 
 *Don't forget to change Basic UI sitemap name through Paper UI.*
 
