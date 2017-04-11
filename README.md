@@ -51,9 +51,8 @@ Install ZWave binding using *PaperUI*.
 New devices can be added using *PaperUI*'s inbox discovery feature. If device not correctly recognised/initialized, wake up again by triple clicking the b button. 
 Ignore Z-Wave Binding instructions available online as they only seem appropriate for OH1, follow this for OH2.
 
-*NOTE: HabMin currently buggy for adding Z-Wave devices, so only used for configuring them at the moment*
-
-*Reminder: Don't forget to wake up battery powered devices when any changes to .items file is made*
+>*NOTE: HabMin currently buggy for adding Z-Wave devices, so only used for configuring them at the moment*
+>*Reminder: Don't forget to wake up battery powered devices when any changes to .items file is made*
 
 
 ## Aeotec Z-Wave Stick Gen5 Instructions
@@ -88,7 +87,7 @@ Number 	mSensorBattery1   	"Battery [%s]"       <battery> 		{ channel="zwave:dev
 
 *alarm_motion* can be set as Switch or Number to display ON/OFF or 1/0.
 
-*Note: In current binding sensor_binary is not functioning properly. As far as I can tell it gets triggered only when the device is woken up manually (by tripple clicking and b button) and stays on till next wake up time.*
+>*Note: In current binding sensor_binary is not functioning properly. As far as I can tell it gets triggered only when the device is woken up manually (by tripple clicking and b button) and stays on till next wake up time.*
 
 ### Fibaro Door/Window Sensor
 
@@ -105,7 +104,7 @@ Number heaterWatts    "Watts [%s]"  <battery>{ channel="zwave:device:15b5860e0b8
 
 Number heaterKWH    "KWH [%s]"  <battery>{ channel="zwave:device:15b5860e0b8:node7:meter_kwh"}
 ```
-*Note: meter_watts is not working in current binding. Instead use sensor_power.*
+>*Note: meter_watts is not working in current binding. Instead use sensor_power.*
 
 ### Corresponding sitemap - 
 
@@ -140,7 +139,7 @@ Number heaterKWH    "KWH [%s]"  <battery>{ channel="zwave:device:15b5860e0b8:nod
 Here is a snapshot of the BasicUI setup through this sitemap (without wall plug):
 ![BasicUI](https://cloud.githubusercontent.com/assets/10930753/24920076/c7b18d5a-1edd-11e7-95c4-80c4e1abafa5.png)
 
-*Don't forget to change Basic UI sitemap name through Paper UI.*
+>*Don't forget to change Basic UI sitemap name through Paper UI.*
 
 
 [Rest of the document to be updated..]
