@@ -52,6 +52,7 @@ New devices can be added using *PaperUI*'s inbox discovery feature. If device no
 Ignore Z-Wave Binding instructions available online as they only seem appropriate for OH1, follow this for OH2.
 
 >***Note:** HabMin currently buggy for adding Z-Wave devices, so only used for configuring them at the moment*
+
 >***Reminder:** Don't forget to wake up battery powered devices when any changes to .items file is made*
 
 
