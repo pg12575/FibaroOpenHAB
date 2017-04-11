@@ -1,0 +1,20 @@
+gGroup  All
+Group  mSensor             (All)
+Group dSensor
+
+//2 x Motion Sensors, 1 x Door Sensor, 1 x Wall Plug
+
+Number motionSensor1	 "Motion Node 4 [%s]" <motion> (mSensor) { channel="zwave:device:15b5860e0b8:node4:alarm_motion" }
+Number mSensorBattery1   "Battery [%s]" <battery> (mSensor) { channel="zwave:device:15b5860e0b8:node4:battery-level" }
+
+Number motionSensor2 "Motion Node 6 [%s]" <motion> (mSensor) { channel="zwave:device:15b5860e0b8:node6:alarm_motion" } 
+Number mSensorBattery2   "Battery [%s]" <battery> (mSensor) { channel="zwave:device:15b5860e0b8:node6:battery-level" }
+
+Number doorSensor1    "Door Node 5 [%s]" <window> (dSensor) { channel="zwave:device:15b5860e0b8:node5:sensor_door"}
+Number dSensorBattery1   "Battery [%s]" <battery> (dSensor) { channel="zwave:device:15b5860e0b8:node5:battery-level" }
+
+Switch heater    "Plug Node 7 [%s]"  { channel="zwave:device:15b5860e0b8:node7:switch_binary"}
+Number heaterWatts    "Watts [%s]"  <battery>{ channel="zwave:device:15b5860e0b8:node7:sensor_power"}
+Number heaterKWH    "KWH [%s]"  <battery>{ channel="zwave:device:15b5860e0b8:node7:meter_kwh"}
+
+

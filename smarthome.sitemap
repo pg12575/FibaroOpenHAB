@@ -1,0 +1,25 @@
+sitemap smarthome label="FibaroOpenHAB SmartHome" {
+
+    Frame label="Movement" {
+
+
+	Text item=motionSensor1 
+	Text item=mSensorBattery1 
+
+	Text item=motionSensor2 
+	Text item=mSensorBattery2
+
+	Text item=doorSensor1
+	Text item=dSensorBattery1 
+    }
+
+    Frame label="Heating" {
+	
+	Switch item=heater
+
+	Text item=heaterWatts
+	Text item=heaterKWH
+
+	}
+  
+}
