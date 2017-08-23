@@ -95,7 +95,13 @@ Number 	mSensorBattery1   	"Battery [%s]"       <battery> 		{ channel="zwave:dev
 
     
     Number doorSensor1    "Door Node 5 [%s]" <window>  { channel="zwave:device:15b5860e0b8:node5:sensor_door"}
-    
+ 
+ 
+   **OR**
+  
+```    
+    Contact doorSensor1    "Door Node 5 [%s]" <window>  { channel="zwave:device:15b5860e0b8:node5:sensor_door"}
+```
     
 ### Fibaro Wall Plug
 ```
